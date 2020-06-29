@@ -2,6 +2,7 @@
 - [ ] promise(esnext)
 - [ ] http
 - [ ] performace
+- [ ] 继承
 
 ## 前端框架
 ### vue
@@ -77,7 +78,7 @@
 - [ ] 闭包，
 - [ ] 调用栈，
 - [ ] Promise
-- [ ] ，ES6，
+- [ ] ES6，
 - [ ] 工程化，
 - [ ] webpack,
 - [ ]  性能优化，
