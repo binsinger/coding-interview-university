@@ -33,13 +33,13 @@ var dog = new Dog('erha');
 
 console.log(dog.name)
 console.log(dog.sleep());
-console.log(dog.eat('bone'))
+// console.log(dog.eat('bone'))
 
 
 // 3. 实例继承
 function Fish (name) {
     var inst = new Animal(name);
-    inst.color = color || 'red';
+    // inst.color = color || 'red';
     return inst;
 }
 
@@ -83,3 +83,41 @@ function Lion (name) {
 }())
 
 var lion = new Lion('mufasa');
+
+
+// es6 class 继承
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+    pos() {
+        console.log(this.x + ',' + this.y)
+    }
+}
+
+class A extends Point {
+    constructor(x, y, color){
+        super(x, y);
+        this.color = color;
+    }
+
+    col () {
+        console.log(this.color)
+    }
+}
+
+let a = new A(1, 2, 'red');
+a.col();
+a.pos();
+
+function Parent5 () {
+    this.name = 'parent5';
+    this.play = [1, 2, 3];
+}
+function Child5() {
+    Parent5.call(this);
+    this.type = 'child5';
+}
+Child5.prototype = Object.create(Parent5.prototype);
+Child5.prototype.constructor = Child5;
